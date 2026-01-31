@@ -9,7 +9,7 @@ export default function Aboutus4() {
 
 
 
-<div className="">
+{/* <div className="">
 <p className="">bilmayman nimadir yozaman nimadirda karochi</p>  
 
 <h3 className="">nimadir</h3>
@@ -17,7 +17,7 @@ export default function Aboutus4() {
 <p className="">bilmayman nimadir yozaman nimadirda karochi</p>
 <p className="">bilmayman nimadir yozaman nimadirda karochi</p>
 <span>nimadir</span>
-</div>  
+</div>   */}
 
 
 
