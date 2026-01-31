@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutUs1 from '../components/aboutus/aboutus1'
+import AboutUs1 from '../components/aboutus/Aboutus1'
 import Aboutus2 from '../components/aboutus/Aboutus2'
 import Blog1 from '../components/Blog/Blog1'
 import Blog2 from '../components/Blog/Blog2'
