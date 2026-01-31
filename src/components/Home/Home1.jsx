@@ -29,7 +29,7 @@ export default function Home1() {
                   <FaPlay className="text-sm" />
                 </div>
                 <span className="font-bold text-[#1E212C] dark:text-white text-sm sm:text-base">
-                  Play showreel
+                  Play showreel.
                 </span>
               </div>
 
@@ -71,7 +71,7 @@ export default function Home1() {
 
           <div>
             <p className="uppercase text-gray-400 dark:text-gray-500 text-sm font-semibold">
-              Who we are
+              Who we are?
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold mt-2 text-gray-900 dark:text-white">
               Why Createx?
