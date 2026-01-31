@@ -75,7 +75,7 @@ export default function Home1() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold mt-2 text-gray-900 dark:text-white">
               Why Createx?
-            </h2>
+            </h2> 
 
             <ul className="mt-6 space-y-4">
               {[
