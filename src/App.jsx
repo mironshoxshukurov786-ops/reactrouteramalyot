@@ -16,10 +16,9 @@ export default function App() {
 
   return (
     <div className="bg-white font-sans min-h-screen">
-      {/* ================= HEADER ================= */}
+
       <header className="bg-[#FFEFEC]">
         <div className="w-full mx-auto px-5 md:px-10 py-5 flex justify-between items-center">
-          {/* LOGO + DESKTOP NAV */}
           <div className="flex items-center gap-x-14">
             <Link to="/">
               <img src="/logo.png" alt="logo" className="w-32" />
@@ -44,7 +43,8 @@ export default function App() {
             </nav>
           </div>
 
-          {/* RIGHT ACTIONS */}
+
+
           <div className="flex items-center gap-x-6">
             <button className="hidden md:block bg-linear-to-r from-[#FF7A1B] to-[#FF4242] text-white px-8 py-3 rounded-sm font-bold text-sm hover:shadow-lg transition">
               Get consultation
@@ -60,7 +60,6 @@ export default function App() {
               </span>
             </div>
 
-            {/* MOBILE MENU ICON */}
             <button
               onClick={() => setMenu(true)}
               className="md:hidden text-2xl text-[#424551]"
@@ -71,13 +70,12 @@ export default function App() {
         </div>
       </header>
 
-      {/* ================= MOBILE MENU ================= */}
       <div
         className={`fixed inset-0 z-40 transition ${
           menu ? "visible" : "invisible"
         }`}
       >
-        {/* Overlay */}
+        
         <div
           onClick={() => setMenu(false)}
           className={`absolute inset-0 bg-black/40 transition-opacity ${
@@ -85,7 +83,7 @@ export default function App() {
           }`}
         ></div>
 
-       {/* MENU PANEL */}
+       
         <div
           className={`absolute top-0 right-0 h-full w-[280px] bg-white shadow-xl p-6 transform transition-transform duration-300 ${
             menu ? "translate-x-0" : "translate-x-full"
