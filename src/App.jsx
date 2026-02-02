@@ -71,85 +71,64 @@ export default function App() {
         </div>
       </header>
 
-  {/* ================= PREMIUM MOBILE MENU ================= */}
-<div
-  className={`fixed inset-0 z-40 transition ${
-    menu ? "visible" : "invisible"
-  }`}
->
-  {/* BLUR OVERLAY */}
-  <div
-    onClick={() => setMenu(false)}
-    className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-500 ${
-      menu ? "opacity-100" : "opacity-0"
-    }`}
-  ></div>
-
-  {/* MENU PANEL */}
-  <div
-    className={`absolute top-0 right-0 h-full w-[300px] bg-white shadow-2xl p-7 transform transition-all duration-500 ease-out ${
-      menu ? "translate-x-0 scale-100" : "translate-x-full scale-95"
-    }`}
-  >
-    {/* HEADER */}
-    <div className="flex justify-between items-center mb-10">
-      <img src="/logo.png" alt="logo" className="w-28" />
-      <button
-        onClick={() => setMenu(false)}
-        className="p-2 rounded-full hover:bg-red-50 transition"
+      {/* ================= MOBILE MENU ================= */}
+      <div
+        className={`fixed inset-0 z-40 transition ${
+          menu ? "visible" : "invisible"
+        }`}
       >
-        <IoClose className="text-2xl text-gray-600 hover:text-red-500" />
-      </button>
-    </div>
-
-    {/* LINKS */}
-    <nav className="flex flex-col gap-6">
-      {[
-        { name: "About Us", path: "/aboutus" },
-        { name: "Courses", path: "/course" },
-        { name: "Events", path: "/event" },
-        { name: "Blog", path: "/blog" },
-        { name: "Contacts", path: "/contact" },
-      ].map((item, i) => (
-        <Link
-          key={i}
-          to={item.path}
+        {/* Overlay */}
+        <div
           onClick={() => setMenu(false)}
-          className="group relative flex items-center justify-between text-[#424551] text-lg font-semibold transition-all"
+          className={`absolute inset-0 bg-black/40 transition-opacity ${
+            menu ? "opacity-100" : "opacity-0"
+          }`}
+        ></div>
+
+        {/* Menu panel */}
+        <div
+          className={`absolute top-0 right-0 h-full w-[280px] bg-white shadow-xl p-6 transform transition-transform duration-300 ${
+            menu ? "translate-x-0" : "translate-x-full"
+          }`}
         >
-          <span className="relative">
-            {item.name}
-            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-[#FF7A1B] to-[#FF4242] transition-all duration-300 group-hover:w-full"></span>
-          </span>
+          <div className="flex justify-between items-center mb-8">
+            <img src="/logo.png" alt="logo" className="w-28" />
+            <IoClose
+              onClick={() => setMenu(false)}
+              className="text-2xl cursor-pointer text-gray-600 hover:text-red-500"
+            />
+          </div>
 
-          <span className="text-xl opacity-0 translate-x-[-6px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-            →
-          </span>
-        </Link>
-      ))}
-    </nav>
+          <nav className="flex flex-col gap-5">
+            {[
+              { name: "About Us", path: "/aboutus" },
+              { name: "Courses", path: "/course" },
+              { name: "Events", path: "/event" },
+              { name: "Blog", path: "/blog" },
+              { name: "Contacts", path: "/contact" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                to={item.path}
+                onClick={() => setMenu(false)}
+                className="text-[#424551] font-semibold hover:text-[#FF4242]"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
 
-    {/* DIVIDER */}
-    <div className="my-10 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
-
-    {/* ACTION BUTTON */}
-    <button
-      onClick={() => {
-        setMenu(false);
-        setOpenLogin(true);
-      }}
-      className="relative w-full overflow-hidden rounded-lg bg-gradient-to-r from-[#FF7A1B] to-[#FF4242] py-3 font-bold text-white shadow-lg transition hover:shadow-xl"
-    >
-      <span className="relative z-10">Log in / Register</span>
-      <span className="absolute inset-0 bg-white/20 opacity-0 transition group-hover:opacity-100"></span>
-    </button>
-
-    {/* FOOTER */}
-    <p className="mt-8 text-xs text-center text-gray-400">
-      © 2026 Education Platform
-    </p>
-  </div>
-</div>
+          <button
+            onClick={() => {
+              setMenu(false);
+              setOpenLogin(true);
+            }}
+            className="mt-10 w-full bg-linear-to-r from-[#FF7A1B] to-[#FF4242] text-white py-3 rounded-md font-bold"
+          >
+            Log in / Register
+          </button>
+        </div>
+      </div>
 
       {/* ================= LOGIN MODAL ================= */}
       {openLogin && (
