@@ -85,7 +85,7 @@ export default function App() {
           }`}
         ></div>
 
-        {/* Menu panel */}
+       {/* MENU PANEL */}
         <div
           className={`absolute top-0 right-0 h-full w-[280px] bg-white shadow-xl p-6 transform transition-transform duration-300 ${
             menu ? "translate-x-0" : "translate-x-full"
